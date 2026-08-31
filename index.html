@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio personal de Andrea Rodríguez, estudiante interesada en tecnología, seguridad de la información y criptografía."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Andrea Rodríguez | Portafolio personal" />
+    <meta property="og:description" content="Tecnología, seguridad de la información y criptografía." />
+    <meta property="og:image" content="__SITE_ORIGIN__/assets/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Andrea Rodríguez | Portafolio personal" />
+    <meta name="twitter:description" content="Tecnología, seguridad de la información y criptografía." />
+    <meta name="twitter:image" content="__SITE_ORIGIN__/assets/og.png" />
+    <meta name="theme-color" content="#f8f5ff" />
+    <title>Andrea Rodríguez | Portafolio personal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.8 15.5A9 9 0 0 1 8.5 3.2 9 9 0 1 0 20.8 15.5Z"/></symbol>
+      <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 21h14"/></symbol>
+      <symbol id="icon-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m11 12 8-8m-3 3 3 3m-6 0 3 3"/></symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24"><path d="M4 5.5A3.5 3.5 0 0 1 7.5 2H11v17H7.5A3.5 3.5 0 0 0 4 22V5.5ZM20 5.5A3.5 3.5 0 0 0 16.5 2H13v17h3.5A3.5 3.5 0 0 1 20 22V5.5Z"/></symbol>
+      <symbol id="icon-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11.5V16c3 2.7 9 2.7 12 0v-4.5M22 9v6"/></symbol>
+      <symbol id="icon-school" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6M9 11h.01M15 11h.01"/></symbol>
+      <symbol id="icon-trend" viewBox="0 0 24 24"><path d="M3 20h18M5 16l4-5 4 3 6-8M15 6h4v4"/></symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24"><path d="M14.5 5 13 3h-2L9.5 5H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4.5Z"/><circle cx="12" cy="12.5" r="4"/></symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 3l-4 18"/></symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="icon-scroll" viewBox="0 0 24 24"><path d="M6 3h12v16a3 3 0 0 1-3 3H6a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3Z"/><path d="M6 3a3 3 0 0 0-3 3v1h6V6a3 3 0 0 0-3-3ZM12 9h3M12 13h3"/></symbol>
+      <symbol id="icon-key-round" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m11 12 9-9M16 7l2 2M14 9l2 2"/></symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M6 9v10M6 5v.01M10 19V9m0 4.5a4 4 0 0 1 8 0V19"/></symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.37 6.8-1.6 6.8-7.4A5.8 5.8 0 0 0 19.3 3 5.4 5.4 0 0 0 19.1.1S17.9-.3 15 1.7a14 14 0 0 0-6 0C6.1-.3 4.9.1 4.9.1A5.4 5.4 0 0 0 4.7 3a5.8 5.8 0 0 0-1.5 4.1c0 5.8 3.5 7 6.8 7.4A4.8 4.8 0 0 0 9 18v4"/><path d="M9 19c-3 .9-3-1.5-4.2-2"/></symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    </svg>
+
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">A<span>/</span>R</a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a class="active" href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#formacion">Formación</a>
+        <a href="#pasatiempos">Pasatiempos</a>
+        <a href="#criptografia">Criptografía</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Activar modo oscuro">
+          <svg class="theme-sun" aria-hidden="true"><use href="#icon-sun" /></svg>
+          <svg class="theme-moon" aria-hidden="true"><use href="#icon-moon" /></svg>
+        </button>
+        <button class="menu-button" type="button" data-menu-toggle aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" data-mobile-menu hidden>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#formacion">Formación</a>
+      <a href="#pasatiempos">Pasatiempos</a>
+      <a href="#criptografia">Criptografía</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <main id="contenido">
+      <section class="hero" id="inicio">
+        <div class="hero-art reveal" aria-label="Espacio reservado para fotografía personal">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="portrait-ring">
+            <div class="portrait-placeholder">AR<span>Tu foto aquí</span></div>
+          </div>
+          <p class="portrait-note"><span>01</span> Perfil personal</p>
+        </div>
+
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Hola, soy</p>
+          <h1>Andrea<br /><em>Rodríguez</em></h1>
+          <p class="role">Estudiante <span></span> Apasionada por la criptografía</p>
+          <p class="hero-description">
+            Me interesa la seguridad de la información y cómo la criptografía protege los datos en un mundo cada vez más digital.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="assets/cv-andrea-rodriguez.txt" download>
+              <svg aria-hidden="true"><use href="#icon-download" /></svg> Descargar CV
+            </a>
+            <a class="button button-secondary" href="assets/llave-publica-andrea.asc" download>
+              <svg aria-hidden="true"><use href="#icon-key" /></svg> Llave pública
+            </a>
+          </div>
+          <p class="demo-note">Archivos demostrativos listos para sustituir.</p>
+        </div>
+        <p class="hero-index" aria-hidden="true">01</p>
+      </section>
+
+      <section class="about section" id="sobre-mi">
+        <div class="section-number reveal" aria-hidden="true">02</div>
+        <div class="reveal">
+          <p class="section-kicker">Sobre mí</p>
+          <h2>Curiosidad que se convierte<br />en <em>soluciones.</em></h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>
+            Soy una persona organizada, analítica y curiosa. Disfruto aprender cosas nuevas y enfrentar retos que me permitan crecer personal y profesionalmente.
+          </p>
+          <p>
+            La criptografía llamó mi atención porque combina matemáticas, lógica y tecnología para crear soluciones que protegen la información.
+          </p>
+          <a class="text-link" href="#formacion">Conoce mi trayectoria <svg aria-hidden="true"><use href="#icon-arrow" /></svg></a>
+        </div>
+      </section>
+
+      <section class="education section-wide" id="formacion">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">Mi recorrido</p>
+            <h2>Formación <em>académica.</em></h2>
+          </div>
+          <p>Una ruta de aprendizaje constante, desde mis bases académicas hasta mi formación profesional.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><svg aria-hidden="true"><use href="#icon-book" /></svg></div>
+            <p class="timeline-date">2015 — 2018</p>
+            <h3>Secundaria</h3>
+            <p class="timeline-place">Escuela Secundaria General</p>
+            <p>Formación integral y desarrollo de habilidades básicas.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><svg aria-hidden="true"><use href="#icon-cap" /></svg></div>
+            <p class="timeline-date">2018 — 2021</p>
+            <h3>Preparatoria</h3>
+            <p class="timeline-place">Colegio de Bachilleres</p>
+            <p>Énfasis en matemáticas, lógica y ciencias naturales.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><svg aria-hidden="true"><use href="#icon-school" /></svg></div>
+            <p class="timeline-date">2021 — 2025</p>
+            <h3>Licenciatura</h3>
+            <p class="timeline-place">Ingeniería en Sistemas Computacionales</p>
+            <p>Formación profesional en tecnología y desarrollo de software.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"><svg aria-hidden="true"><use href="#icon-trend" /></svg></div>
+            <p class="timeline-date">2025 — Actualidad</p>
+            <h3>Especialización</h3>
+            <p class="timeline-place">Seguridad de la información</p>
+            <p>Aprendizaje continuo en criptografía y protección de datos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="hobbies section" id="pasatiempos">
+        <div class="section-heading compact reveal">
+          <div>
+            <p class="section-kicker">Fuera del aula</p>
+            <h2>Lo que me <em>inspira.</em></h2>
+          </div>
+          <p>Tres actividades que alimentan mi creatividad, curiosidad y forma de resolver problemas.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="hobby-card reveal">
+            <div class="card-icon"><svg aria-hidden="true"><use href="#icon-book" /></svg></div>
+            <p class="card-number">01</p>
+            <h3>Lectura</h3>
+            <p>Disfruto leer sobre tecnología, ciencia y desarrollo personal. Siempre encuentro algo nuevo que aprender.</p>
+          </article>
+          <article class="hobby-card featured reveal">
+            <div class="card-icon"><svg aria-hidden="true"><use href="#icon-camera" /></svg></div>
+            <p class="card-number">02</p>
+            <h3>Fotografía</h3>
+            <p>Me gusta capturar momentos y paisajes; la fotografía me permite observar el mundo desde otra perspectiva.</p>
+          </article>
+          <article class="hobby-card reveal">
+            <div class="card-icon"><svg aria-hidden="true"><use href="#icon-code" /></svg></div>
+            <p class="card-number">03</p>
+            <h3>Programación</h3>
+            <p>Disfruto crear soluciones, resolver problemas y aprender nuevos lenguajes y herramientas digitales.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="crypto section-wide" id="criptografia">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker">Datos curiosos</p>
+            <h2>Criptografía en la<br /><em>vida cotidiana.</em></h2>
+          </div>
+          <p>Ideas breves para descubrir cómo los códigos y las llaves digitales protegen nuestra comunicación.</p>
+        </div>
+
+        <div class="crypto-grid">
+          <article class="crypto-card reveal">
+            <div class="crypto-visual">
+              <svg aria-hidden="true"><use href="#icon-shield" /></svg>
+              <span class="binary" aria-hidden="true">0101<br />1010</span>
+            </div>
+            <div class="crypto-content">
+              <p class="card-number">01 — Protección diaria</p>
+              <h3>La criptografía protege tu mundo</h3>
+              <p>Desde mensajes hasta transacciones bancarias, está detrás de la seguridad digital que usamos todos los días.</p>
+            </div>
+          </article>
+
+          <article class="crypto-card reveal">
+            <div class="crypto-visual">
+              <svg aria-hidden="true"><use href="#icon-scroll" /></svg>
+              <span class="cipher" aria-hidden="true">A → D</span>
+            </div>
+            <div class="crypto-content">
+              <p class="card-number">02 — Historia</p>
+              <h3>Los códigos existen desde hace siglos</h3>
+              <p>Los antiguos sistemas de sustitución, como el cifrado César, cambiaban cada letra para ocultar un mensaje.</p>
+            </div>
+          </article>
+
+          <article class="crypto-card reveal">
+            <div class="crypto-visual">
+              <svg aria-hidden="true"><use href="#icon-key-round" /></svg>
+              <span class="key-label" aria-hidden="true">PUB / PRIV</span>
+            </div>
+            <div class="crypto-content">
+              <p class="card-number">03 — Claves</p>
+              <h3>Una llave pública y otra privada</h3>
+              <p>La criptografía asimétrica permite compartir una clave para cifrar sin revelar la clave privada que descifra.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="crypto-quote reveal">
+          <span aria-hidden="true">“</span>
+          <p>La privacidad no es esconderse: es poder elegir qué compartimos y con quién.</p>
+        </div>
+      </section>
+
+      <section class="contact section" id="contacto">
+        <div class="contact-copy reveal">
+          <p class="section-kicker">Contacto</p>
+          <h2>¿Creamos algo<br /><em>interesante?</em></h2>
+          <p>Estoy abierta a conversar sobre tecnología, seguridad, proyectos académicos y nuevas oportunidades de aprendizaje.</p>
+        </div>
+
+        <div class="contact-panel reveal">
+          <a class="email-link" href="mailto:andrea.rodriguez@correo.com">
+            <span><svg aria-hidden="true"><use href="#icon-mail" /></svg></span>
+            <span><small>Correo electrónico</small>andrea.rodriguez@correo.com</span>
+            <svg class="email-arrow" aria-hidden="true"><use href="#icon-arrow" /></svg>
+          </a>
+          <div class="social-row">
+            <p>Sígueme en</p>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn (enlace de ejemplo)"><svg aria-hidden="true"><use href="#icon-linkedin" /></svg></a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub (enlace de ejemplo)"><svg aria-hidden="true"><use href="#icon-github" /></svg></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (enlace de ejemplo)"><svg aria-hidden="true"><use href="#icon-instagram" /></svg></a>
+          </div>
+          <p class="demo-note">Datos y enlaces demostrativos para personalizar.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#inicio">A<span>/</span>R</a>
+      <p>© <span data-current-year></span> Andrea Rodríguez. Todos los derechos reservados.</p>
+      <a class="back-to-top" href="#inicio">Volver arriba <span aria-hidden="true">↑</span></a>
+    </footer>
+  </body>
+</html>
