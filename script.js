@@ -1,42 +1,7 @@
 document.documentElement.classList.add('js');
 
-const root = document.documentElement;
 const menuButton = document.querySelector('[data-menu-toggle]');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
-const themeButton = document.querySelector('[data-theme-toggle]');
-const themeMeta = document.querySelector('meta[name="theme-color"]');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-const readSavedTheme = () => {
-  try {
-    return localStorage.getItem('portfolio-theme');
-  } catch {
-    return null;
-  }
-};
-
-const saveTheme = (theme) => {
-  try {
-    localStorage.setItem('portfolio-theme', theme);
-  } catch {
-    // El sitio sigue funcionando aunque el navegador bloquee el almacenamiento.
-  }
-};
-
-const setTheme = (theme) => {
-  root.dataset.theme = theme;
-  const isDark = theme === 'dark';
-  themeButton?.setAttribute('aria-label', isDark ? 'Activar modo claro' : 'Activar modo oscuro');
-  themeMeta?.setAttribute('content', isDark ? '#120d1d' : '#f8f5ff');
-};
-
-setTheme(readSavedTheme() || (prefersDark.matches ? 'dark' : 'light'));
-
-themeButton?.addEventListener('click', () => {
-  const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-  setTheme(nextTheme);
-  saveTheme(nextTheme);
-});
 
 const setMenuState = (isOpen) => {
   if (!menuButton || !mobileMenu) return;
@@ -98,3 +63,47 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
 document.querySelector('[data-current-year]').textContent = new Date().getFullYear();
+
+/* Photo carousel behavior: prev/next buttons, snap scrolling, keyboard support */
+(() => {
+  // support multiple carousels if present
+  const carousels = document.querySelectorAll('.photo-carousel');
+  carousels.forEach((carousel) => {
+    const viewport = carousel.querySelector('.carousel-viewport');
+    if (!viewport) return;
+
+    const prev = carousel.querySelector('.carousel-prev');
+    const next = carousel.querySelector('.carousel-next');
+    const track = viewport.querySelector('.carousel-track');
+
+    const getScrollAmount = () => {
+      // prefer CSS variable --slide, fallback to first slide width
+      const css = getComputedStyle(track).getPropertyValue('--slide');
+      if (css) {
+        const val = parseFloat(css);
+        if (!Number.isNaN(val)) return Math.round(val +  parseFloat(getComputedStyle(track).gap || 16));
+      }
+      const slide = track.querySelector('.carousel-slide');
+      if (!slide) return Math.round(viewport.clientWidth * 0.8);
+      const style = window.getComputedStyle(track);
+      const gap = parseFloat(style.gap || 16) || 16;
+      return Math.round(slide.getBoundingClientRect().width + gap);
+    };
+
+    prev?.addEventListener('click', () => viewport.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' }));
+    next?.addEventListener('click', () => viewport.scrollBy({ left: getScrollAmount(), behavior: 'smooth' }));
+
+    // keyboard: left/right when focused
+    viewport.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); viewport.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' }); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); viewport.scrollBy({ left: getScrollAmount(), behavior: 'smooth' }); }
+    });
+
+    // pointer drag support for a smoother swipe feel
+    let isDown = false; let startX = 0; let scrollLeft = 0;
+    viewport.addEventListener('pointerdown', (e) => { isDown = true; try { viewport.setPointerCapture(e.pointerId); } catch {} startX = e.clientX; scrollLeft = viewport.scrollLeft; });
+    viewport.addEventListener('pointermove', (e) => { if (!isDown) return; const dx = startX - e.clientX; viewport.scrollLeft = scrollLeft + dx; });
+    const endDrag = (e) => { if (!isDown) return; isDown = false; try { viewport.releasePointerCapture(e.pointerId); } catch {} };
+    viewport.addEventListener('pointerup', endDrag); viewport.addEventListener('pointercancel', endDrag);
+  });
+})();

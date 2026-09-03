@@ -10,6 +10,7 @@ const files = [
   { route: '/script.js', path: 'script.js', type: 'text/javascript; charset=utf-8' },
   { route: '/assets/cv-andrea-rodriguez.txt', path: 'assets/cv-andrea-rodriguez.txt', type: 'text/plain; charset=utf-8' },
   { route: '/assets/llave-publica-andrea.asc', path: 'assets/llave-publica-andrea.asc', type: 'application/pgp-keys; charset=utf-8' },
+  { route: '/assets/favicon.svg', path: 'assets/favicon.svg', type: 'image/svg+xml; charset=utf-8' },
 ];
 
 const ogImagePath = resolve(projectRoot, 'assets', 'og.png');
